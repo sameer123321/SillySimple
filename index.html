@@ -8,8 +8,16 @@
 <body>
 <button id="silly">Do it</button>
 <button id="clear">Clear</button>
+<button id="ciae">Click it and Enjoy</button>
 <ul id="result"></ul>
 
+    <div id="message" style="background-color:blueviolet;width:100%;height:100%;position:absolute;text-align:center;display:none" >
+        <button id="close">Close</button>
+        <h2>My First Android App Dada<br />
+        <br />
+        
+        </h2>
+    </div>
 <script src="js/zepto.js"></script>
 <script src="js/silly.js"></script>
 <script src="js/jquery-1.11.3.min.js"></script>
@@ -17,8 +25,17 @@
 $('#silly').click(function(){
     $('#result').append('<li>' + Date().toString() + '</li>');
 });
+
 $('#clear').click(function(){
 $('#result').html('');
+});
+
+$('#ciae').click(function () {
+    $('#message').show();
+});
+
+$('#close').click(function () {
+    $('#message').hide();
 });
 </script>
 </body>
